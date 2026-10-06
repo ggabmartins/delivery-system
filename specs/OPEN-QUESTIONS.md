@@ -22,5 +22,5 @@ Append-only; both members may add entries.
 
 - [x] **Q1 — Body of the 500**: decided by Gabriel: `{"error": "Payment failed"}`.
 - [x] **Q2 — Package**: `br.com.fiap.delivery.paymentservice` (decided by Gabriel).
-- [ ] **Q3 — Tests**: unit tests of `PaymentService` (fake `Random`) + context-load test. OK?
+- [x] **Q3 — Tests**: option A (unit tests of `PaymentService` with fake `Random` + context-load test), decided by Gabriel.
 - [x] **Q4 — Extra classes**: keep `RandomConfig` and `GlobalExceptionHandler` (decided by Gabriel).

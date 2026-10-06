@@ -68,5 +68,5 @@ Package: `br.com.fiap.delivery.paymentservice` (same style as `eurekaserver`).
 
 1. **Q1 — Body of the 500**: DECIDED by the owner: `{"error": "Payment failed"}`.
 2. **Q2 — Package** `br.com.fiap.delivery.paymentservice`: DECIDED by the owner.
-3. **Q3 — Tests**: the unit tests of `PaymentService` plus a context-load test (listed in section 2, item 8). OK?
+3. **Q3 — Tests**: DECIDED by the owner: option A (unit tests of `PaymentService` with a fake `Random` + context-load test).
 4. **Q4 — Extra classes** (`RandomConfig`, `GlobalExceptionHandler`): DECIDED by the owner: keep.

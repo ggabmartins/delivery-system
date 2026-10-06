@@ -2,7 +2,7 @@
 
 Rule: one task at a time; stop after each task and wait for the session owner's "ok".
 
-- [ ] **T1** — Dependencies in `payment-service/build.gradle` (web, Eureka client, tests), `PaymentServiceApplication`, `application.yml` (name, port 8081, Eureka client, `instance-id`). Verify: `./gradlew :payment-service:compileJava` passes; with Eureka up, `bootRun` registers `PAYMENT-SERVICE` (AC1).
+- [x] **T1** — Dependencies in `payment-service/build.gradle` (web, Eureka client, tests), `PaymentServiceApplication`, `application.yml` (name, port 8081, Eureka client, `instance-id`). Verify: `./gradlew :payment-service:compileJava` passes; with Eureka up, `bootRun` registers `PAYMENT-SERVICE` (AC1).
 - [ ] **T2** — Payment logic: `PaymentRequest`, `PaymentResponse`, `RandomConfig`, `PaymentFailedException`, `PaymentService` (Random, port, logs). Verify: `compileJava` passes.
 - [ ] **T3** — HTTP layer: `PaymentController` + `GlobalExceptionHandler` (500 `{"error": ...}`). Verify: `curl -X POST /payments` returns 200 or 500 (AC3).
 - [ ] **T4** — Tests: `PaymentServiceTest` (fake `Random`) and `PaymentServiceApplicationTests`. Verify: `./gradlew :payment-service:test` passes (AC8).
