@@ -4,3 +4,15 @@ docs/spec/
 .idea/
 .gradle/
 build/
+
+# local config and secrets
+application-local.*
+
+# IDE and build output
+*.iml
+out/
+
+# logs and local H2 files
+*.log
+*.mv.db
+*.trace.db
