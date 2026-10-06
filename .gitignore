@@ -1,0 +1,6 @@
+docs/references/
+docs/spec/
+.env
+.idea/
+.gradle/
+build/
