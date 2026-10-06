@@ -39,13 +39,13 @@ No public HTTP contract; the Eureka endpoints are standard:
 
 ## 5. Acceptance criteria (verifiable)
 
-- [ ] AC1 — `./gradlew :eureka-server:bootRun` starts without errors and listens on 8761.
-- [ ] AC2 — `GET /` (dashboard) returns 200.
-- [ ] AC3 — `GET /eureka/apps` with `Accept: application/json` returns 200 and an empty or valid application list.
-- [ ] AC4 — The server does not appear registered in itself (no `EUREKA-SERVER` in `/eureka/apps`) and the log shows no registration/fetch errors against itself.
-- [ ] AC5 — `./gradlew :eureka-server:build` passes (including `bootJar` and the context-load test, now that the module has a main class).
-- [ ] AC6 — No `localhost` in the eureka-server sources/config; no secrets.
-- [ ] AC7 — A `@SpringBootTest` context-load test exists in `eureka-server` and passes (`./gradlew :eureka-server:test`).
+- [x] AC1 — `./gradlew :eureka-server:bootRun` starts without errors and listens on 8761.
+- [x] AC2 — `GET /` (dashboard) returns 200.
+- [x] AC3 — `GET /eureka/apps` with `Accept: application/json` returns 200 and an empty or valid application list.
+- [x] AC4 — The server does not appear registered in itself (no `EUREKA-SERVER` in `/eureka/apps`) and the log shows no registration/fetch errors against itself.
+- [x] AC5 — `./gradlew :eureka-server:build` passes (including `bootJar` and the context-load test, now that the module has a main class).
+- [x] AC6 — No `localhost` in the eureka-server sources/config; no secrets.
+- [x] AC7 — A `@SpringBootTest` context-load test exists in `eureka-server` and passes (`./gradlew :eureka-server:test`).
 
 ## 6. Out of scope
 
