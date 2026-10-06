@@ -29,14 +29,14 @@ The body of the 500 is not defined by the professor; the project uses `{"error":
 
 ## 4. Acceptance criteria (verifiable)
 
-- [ ] AC1 — `./gradlew :payment-service:bootRun` starts on 8081 and registers in Eureka as `PAYMENT-SERVICE`.
-- [ ] AC2 — A second instance with `--server.port=8082` starts and both appear in Eureka as separate instances (`payment-service:8081` and `payment-service:8082`).
-- [ ] AC3 — `POST /payments` `{"amount": 79.80}` returns either 200 `{"status":"APPROVED","instance":<port>}` or 500; `instance` equals the port of the instance called.
-- [ ] AC4 — In 200 sequential calls to one instance, the share of 500s is between 35% and 65%.
-- [ ] AC5 — Each call logs the instance port and the result; calls to 8081 and 8082 are distinguishable in their logs.
-- [ ] AC6 — `./gradlew :payment-service:build` passes (including `bootJar` and the tests).
-- [ ] AC7 — No `localhost` in service-to-service calls (only the Eureka `defaultZone` URL, which CLAUDE.md allows) and no secrets.
-- [ ] AC8 — Automated tests (see plan) pass.
+- [x] AC1 — `./gradlew :payment-service:bootRun` starts on 8081 and registers in Eureka as `PAYMENT-SERVICE`.
+- [x] AC2 — A second instance with `--server.port=8082` starts and both appear in Eureka as separate instances (`payment-service:8081` and `payment-service:8082`).
+- [x] AC3 — `POST /payments` `{"amount": 79.80}` returns either 200 `{"status":"APPROVED","instance":<port>}` or 500; `instance` equals the port of the instance called.
+- [x] AC4 — In 200 sequential calls to one instance, the share of 500s is between 35% and 65%.
+- [x] AC5 — Each call logs the instance port and the result; calls to 8081 and 8082 are distinguishable in their logs.
+- [x] AC6 — `./gradlew :payment-service:build` passes (including `bootJar` and the tests).
+- [x] AC7 — No `localhost` in service-to-service calls (only the Eureka `defaultZone` URL, which CLAUDE.md allows) and no secrets.
+- [x] AC8 — Automated tests (see plan) pass.
 
 ## 5. Out of scope
 
