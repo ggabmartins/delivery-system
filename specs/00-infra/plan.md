@@ -25,7 +25,7 @@ Per-service dependencies are only the ones the spec requires for that service (s
 1. **Groovy DSL** (`.gradle`), same as the professor's references (CLAUDE.md allows `.gradle(.kts)`).
 2. **Versions**: the professor's reference uses Boot 4.1.1, Spring Cloud 2025.1.1, Gradle 9.7.1. Re-check exact Boot 4 / Cloud 2025.1.x / Spring AI versions and the Boot 4 starter names (modules were reorganized in Boot 4) in the official docs before writing files (CLAUDE.md section 10). This is task T1.
 3. **Java 25 via toolchain** (`JavaLanguageVersion.of(25)`), so the build does not depend on the `java` on PATH, as long as a JDK 25 is installed.
-4. **Modules without sources**: with no main class `bootJar` can fail. Verification therefore uses `projects` and `build`; if `bootJar` complains, disable it until slice 01 adds the main class (decide at implementation, will ask).
+4. **Modules without sources**: `bootJar` fails without a main class. Decision (owner): keep the build files clean and verify with `./gradlew build -x bootJar`; the failure of a plain `build` disappears by itself as each slice adds its main class.
 5. **RabbitMQ credentials**: compose without custom credentials, i.e. image defaults `guest/guest` (works since all services run on the host via `bootRun`). Avoids committing a password; later slices need no `spring.rabbitmq.*` credentials.
 6. **Compose has only RabbitMQ**, as the spec asks.
 7. **Shared files** (`settings.gradle`, root `build.gradle`, compose, README, CLAUDE.md, OPEN-QUESTIONS): small commits; tell Orlando when 00 reaches `main`, since side B starts only after that.

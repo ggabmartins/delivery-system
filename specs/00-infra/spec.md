@@ -32,7 +32,7 @@ This slice exposes no HTTP contract. It fixes the following infrastructure contr
 ## 4. Acceptance criteria (verifiable)
 
 - [ ] AC1 — `./gradlew projects` prints the 4 subprojects and nothing else under the root.
-- [ ] AC2 — `./gradlew build` finishes with `BUILD SUCCESSFUL` using Java 25 (no sources yet, so no `bootJar`/test failures).
+- [ ] AC2 — `./gradlew build -x bootJar` finishes with `BUILD SUCCESSFUL` using Java 25. The `-x bootJar` exclusion is explicit and temporary: until each service has its `@SpringBootApplication` class (slices 01-08), `bootJar` fails with "Main class name has not been configured"; a plain `./gradlew build` works once every module has one. (Changed from plain `build` with the owner's approval, 2026-10-06.)
 - [ ] AC3 — `docker compose config` is valid and `docker compose up -d` leaves the `rabbitmq` container running.
 - [ ] AC4 — RabbitMQ UI answers on port 15672 (login with the compose credentials) and port 5672 accepts connections.
 - [ ] AC5 — `git status` after a build shows no `build/`, `.gradle/`, `.idea/`, `*.iml` files; `docs/references/` and `docs/spec/` are ignored.
