@@ -8,6 +8,6 @@ Rule: one task at a time; stop after each task and wait for the session owner's 
 - [x] **T4** — `docker-compose.yml` (RabbitMQ). Verify: `docker compose config`, `docker compose up -d`, UI on :15672, then `docker compose down`.
 - [x] **T5** — Complete `.gitignore`, add `.env.example` (and `.gitattributes` if approved). Verify: AC5, AC6.
 - [x] **T6** — `README.md` (description, run order, ports, env vars, names + RM). Verify: AC7, AC8.
-- [ ] **T7** — Verify slice: run AC1–AC8 and report. Then push `feat/00-infra` and open the PR for Orlando's review. **Stop** (do not start slice 01 without request).
+- [x] **T7** — Verify slice: run AC1–AC8 and report. Then push `feat/00-infra` and open the PR for Orlando's review. **Stop** (do not start slice 01 without request).
 
 Commits: one per task, English, `type(scope): message` (e.g. `build(infra): add gradle multi-project skeleton`).
