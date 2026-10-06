@@ -3,7 +3,7 @@
 Rule: one task at a time; stop after each task and wait for the session owner's "ok".
 
 - [x] **T1** — Confirm versions in the official docs (Boot 4.x, Spring Cloud 2025.1.x, Gradle, Boot 4 starter names) and record them in `plan.md`. *(no code)*
-- [ ] **T2** — Gradle wrapper + root `settings.gradle` (4 includes) + root `build.gradle` / `gradle.properties` (common config, Java 25 toolchain). Verify: `./gradlew projects` lists the 4 projects.
+- [x] **T2** — Gradle wrapper + root `settings.gradle` (4 includes) + root `build.gradle` / `gradle.properties` (common config, Java 25 toolchain). Verify: `./gradlew projects` lists the 4 projects.
 - [ ] **T3** — Per-module `build.gradle` (plugins + BOM + dependencies per decision on question 4). Verify: `./gradlew build` -> `BUILD SUCCESSFUL`.
 - [ ] **T4** — `docker-compose.yml` (RabbitMQ). Verify: `docker compose config`, `docker compose up -d`, UI on :15672, then `docker compose down`.
 - [ ] **T5** — Complete `.gitignore`, add `.env.example` (and `.gitattributes` if approved). Verify: AC5, AC6.
